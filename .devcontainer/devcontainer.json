@@ -1,0 +1,26 @@
+{
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb",
+    "storage": "32gb"
+  },
+  "image": "mcr.microsoft.com/devcontainers/universal:2.13.0",
+  "postAttachCommand": {
+    "install": "bash -i scripts/install.sh"
+  },
+  "forwardPorts": [1880],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jebbs.plantuml@2.18.1"
+      ],
+      "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 300,
+        "remote.autoForwardPorts": false,
+        "plantuml.server": "http://www.plantuml.com/plantuml",
+        "plantuml.render": "PlantUMLServer"
+      }
+    }
+  }
+}
